@@ -51,6 +51,9 @@
             "php artisan key:generate"
         ]
     },
+    "config": {
+		"preferred-install": "dist"
+	},
     "minimum-stability": "dev",
     "prefer-stable": true
 }
