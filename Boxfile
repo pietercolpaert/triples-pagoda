@@ -5,14 +5,14 @@ web1: #component type & number
   after_build:
     - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install --prefer-source"
   after_deploy:
+    - "php artisan migrate:install"
     - "php artisan cache:clear"
     - "rm -f app/storage/views/*"
-  before_deploy:
-    - "php artisan migrate:install"
-    - "php artisan migrate"
     - "php artisan migrate --package=cartalyst/sentry"
-    - "php artisan migrate --package=tdt/triples"
     - "php artisan db:seed"
+  before_deploy:
+    - "php artisan migrate"
+    - "php artisan migrate --package=tdt/triples"
   php_extensions:
     - mbstring
     - mcrypt
