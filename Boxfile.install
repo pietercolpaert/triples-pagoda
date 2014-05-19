@@ -1,7 +1,7 @@
 db1:
   type: mysql
 
-web01:
+web1:
   before_deploy:
     - "php artisan migrate:install"
     - "php artisan migrate --package=cartalyst/sentry"
