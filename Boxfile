@@ -1,0 +1,16 @@
+web1: #component type & number
+  name: tdt            #component settings
+  shared_writable_dirs:
+    - app/storage
+  document_root: public
+  php_version: 5.4.14
+  php_extensions:
+    - mysql
+     
+db1: #component type & number 
+  name: triples            #component settings
+  type: mysql
+
+cache1:
+  name: tdtcache
+  type: memcached
