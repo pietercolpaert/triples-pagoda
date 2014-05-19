@@ -1,3 +1,4 @@
+app/storage
 Makefile
 *.DS_Store
 .settings
