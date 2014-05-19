@@ -3,7 +3,7 @@ web1: #component type & number
   document_root: public
   php_version: 5.4.14
   after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php ; touch FIRSTTIME ;  php composer.phar install --prefer-source ; else ; php composer update ; fi"
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php ; touch FIRSTTIME ;  php composer.phar install --prefer-source ; else ; php composer update ; fi ;"
   after_deploy:
     - "rm -f app/storage/views/*"
   before_deploy:
