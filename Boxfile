@@ -7,7 +7,7 @@ web1: #component type & number
   after_deploy:
     - "rm -f app/storage/views/*"
   before_deploy:
-    - "if [ -f FIRST ] ; then php artisan migrate:install ; php artisan migrate --package=cartalyst/sentry ; php artisan db:seed ; rm FIRST; fi ;"
+    - "if [ -f FIRSTTIME ] ; then php artisan migrate:install ; php artisan migrate --package=cartalyst/sentry ; php artisan db:seed ; rm FIRSTTIME; fi ;"
     - "php artisan cache:clear"
     - "php artisan migrate"
     - "php artisan migrate --package=tdt/triples"
