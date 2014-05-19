@@ -14,6 +14,7 @@ web1: #component type & number
     - mbstring
     - curl
     - mcrypt
+    - mysql
     - pdo_mysql
     - redis
     - zip
