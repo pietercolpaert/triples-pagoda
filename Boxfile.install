@@ -4,6 +4,6 @@ db1:
 web1:
   before_deploy:
     - "php artisan migrate:install"
+    - "php artisan migrate"
     - "php artisan migrate --package=cartalyst/sentry"
     - "php artisan db:seed"
-
