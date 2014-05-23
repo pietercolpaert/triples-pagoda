@@ -587,6 +587,10 @@ footer{
             }
         }
     }
+
+    &.triples{
+        border: 1px solid;
+    }
 }
 
 .scroll-horizontal{
@@ -774,6 +778,10 @@ button.close {
         }
     }
 
+}
+
+div.leaflet-container{
+    min-height: 600px;
 }
 
 
